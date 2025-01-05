@@ -1,0 +1,10 @@
+Ligand,Binding Affinity,rmsd/ub, rmsd/lb
+receptor_cleaned_test_sample1,-7.3,0.0,0.0
+receptor_cleaned_test_sample1,-7.0,47.675,46.267
+receptor_cleaned_test_sample1,-7.0,44.849,43.009
+receptor_cleaned_test_sample1,-6.8,67.618,65.882
+receptor_cleaned_test_sample1,-6.7,29.048,27.916
+receptor_cleaned_test_sample1,-6.7,35.212,32.627
+receptor_cleaned_test_sample1,-6.6,33.142,31.35
+receptor_cleaned_test_sample1,-6.6,48.5,47.107
+receptor_cleaned_test_sample1,-6.5,52.352,50.938
