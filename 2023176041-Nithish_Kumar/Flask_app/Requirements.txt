@@ -1,0 +1,14 @@
+please install these libraries........
+
+pip install
+
+tensorflow
+keras
+matplotlib
+numpy
+pandas
+pillow
+sklearn
+
+
+and the navigate to this folder and run "python app.py"

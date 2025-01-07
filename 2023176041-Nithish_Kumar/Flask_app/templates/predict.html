@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>   
+</head>
+
+<style>
+    body {
+        background-image: url(static/images/bg.jpeg);
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+
+    section {
+        width: 90%;
+        height: fit-content;
+        /*background-image: url(static/images/bg2.jpeg);*/
+        background-color: black;
+        border-radius: 25px;
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        bottom: 5%;
+        padding: 2%;
+        transform: translate(-50%, -50%);
+    }
+
+    table {
+        width: 100%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        color: white;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid white;
+    }
+
+    #ans {
+        text-align: center;
+        font-size: 40px;
+        color: red;
+    }
+
+    #org_ans {
+        text-align: center;
+        font-size: 40px;
+        color: blue;
+    }
+</style>
+
+<body>
+    <section>
+        <h1 style="text-align: center; color: white;">Prediction Results</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Frame No</th>
+                    <th>Frame</th>
+                    <th>Orginal Model Prediction %</th>
+                    <th>Orginal Model Label</th>
+                    <th>Enhanced Model Prediction %</th>
+                    <th>Enhanced Model Label</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in frame_results %}
+                <tr>
+                    <td>{{ result.frame_no }}</td>
+                    <td><img src="{{ result.frame_path }}" width="100" alt="Frame"></td>
+                    <td>{{ result.org_model_percentage | round(2) }}%</td>
+                    <td>{{ result.org_model_label }}</td>
+                    <td>{{ result.model_percentage | round(2) }}%</td>
+                    <td>{{ result.model_label }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h1 style="text-align: center; color: #00fdf1;">Enhanced Model Prediction: <span id="ans">{{ ans }}</span></h1>
+        <h1 style="text-align: center; color: #00fdf1;">Orginal Model Prediction: <span id="ans">{{ org_ans }}</span></h1>
+    </section>
+</body>
+</html>
